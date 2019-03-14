@@ -19,7 +19,7 @@ body {
   border: 1px solid black;
   border-radius: 6px;
   box-sizing: border-box;
-  margin: 20px;
+  margin: 30px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -54,7 +54,7 @@ body {
   border-radius: 6px;
   font-size: 30px;
   height: 80px;
-  width: 175px;
+  width: 170px;
   margin-right: 5px;
   margin-left: 5px;
   display: flex;
