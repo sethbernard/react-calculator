@@ -40,6 +40,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.button-container {
+  cursor: pointer;
+}
 
 .row-of-buttons {
   display: flex;

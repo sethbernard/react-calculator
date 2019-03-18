@@ -1,5 +1,7 @@
+import React from 'react';
+
 const Display = () => {
-  return '000';
+  return <div className="Display">000</div>;
 };
 
 export default Display;
