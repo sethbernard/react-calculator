@@ -4,16 +4,23 @@ import ZeroButton from './ZeroButton';
 import EqualButton from './EqualButton';
 import ClearButton from './ClearButton';
 import OffButton from './OffButton';
+import DeleteButton from './DeleteButton';
 
 class Buttons extends Component {
   render() {
-    const { appendInput, handleEqual, clearInput, turnOff } = this.props;
+    const {
+      appendInput,
+      handleEqual,
+      clearInput,
+      turnOff,
+      handleDelete
+    } = this.props;
     return (
       <div className="button-container">
         <div className="row-of-buttons">
           <OffButton text="OFF" handleClick={turnOff} />
           <ClearButton text="AC" handleClick={clearInput} />
-          <Button text="CE" />
+          <DeleteButton text="CE" handleClick={handleDelete} />
           <Button text="/" handleClick={appendInput} />
         </div>
         <div className="row-of-buttons">

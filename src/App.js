@@ -11,16 +11,25 @@ class App extends Component {
   };
 
   appendInput = e => {
-    if (this.state.isOn) {
+    let { isOn, input } = this.state;
+    if (isOn) {
       this.setState({
-        input: this.state.input + e.currentTarget.textContent
+        input: input + e.currentTarget.textContent
       });
     }
   };
 
   handleEqual = () => {
+    let { input } = this.state;
     this.setState({
-      output: parseFloat(math.eval(this.state.input)).toFixed(6)
+      output: parseFloat(math.eval(input)).toFixed(4)
+    });
+    setTimeout(this.newCalculation, 1);
+  };
+
+  newCalculation = () => {
+    this.setState({
+      input: this.state.output
     });
   };
 
@@ -33,6 +42,14 @@ class App extends Component {
       input: '',
       output: '',
       isOn: false
+    });
+  };
+
+  handleDelete = () => {
+    let { input } = this.state;
+    let fixedInput = input.substr(0, input.length - 1);
+    this.setState({
+      input: fixedInput
     });
   };
 
@@ -50,6 +67,7 @@ class App extends Component {
           handleEqual={this.handleEqual}
           clearInput={this.clearInput}
           turnOff={this.turnOff}
+          handleDelete={this.handleDelete}
         />
       </div>
     );
