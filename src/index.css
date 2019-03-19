@@ -10,10 +10,20 @@ body {
 .App {
   height: 650px;
   width: 400px;
-  border: 2px solid grey;
+  border: 2px solid black;
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
-  background-color: grey;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .display-container {
@@ -54,9 +64,14 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
-  background-color: rgba(20, 20, 20, 0.883);
-  color: white;
+  background-color: #424242;
+  color: #ffffff;
 }
+
+.Button:hover {
+  background-color: #212121;
+}
+
 .button-container {
   cursor: pointer;
 }
@@ -81,21 +96,39 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: -3px 3px darkgrey, -2px 2px black, -1px 1px black;
-  background-color: black;
-  color: white;
+  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.ZeroButton:hover {
+  background-color: #212121;
 }
 
 .sensitiveButton {
-  background-color: orange;
-  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+  background-color: #ff9100;
+  box-shadow: -3px 3px #000000, -2px 2px #000000, -1px 1px #000000;
+  border: 1px solid #000000;
+}
+
+.sensitiveButton:hover {
+  background-color: #ff6d00;
 }
 #equalButton {
-  background-color: green;
-  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+  background-color: #4caf50;
+  box-shadow: -3px 3px #000000, -2px 2px #000000, -1px 1px #000000;
+  border: 1px solid #000000;
+}
+#equalButton:hover {
+  background-color: #43a047;
 }
 
 .operationButton {
-  background-color: blue;
-  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+  background-color: #42a5f5;
+  box-shadow: -3px 3px #000000, -2px 2px #000000, -1px 1px #000000;
+  border: 1px solid #000000;
+}
+
+.operationButton:hover {
+  background-color: #2196f3;
 }
