@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = props => {
+const ClearButton = props => {
   return (
     <div className="Button" onClick={props.handleClick}>
       {props.text}
@@ -8,4 +8,4 @@ const Button = props => {
   );
 };
 
-export default Button;
+export default ClearButton;

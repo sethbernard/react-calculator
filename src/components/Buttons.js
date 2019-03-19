@@ -1,42 +1,43 @@
 import React, { Component } from 'react';
 import Button from './Button';
 import ZeroButton from './ZeroButton';
-import * as math from 'mathjs';
-import Display from './Display';
 import EqualButton from './EqualButton';
+import ClearButton from './ClearButton';
+import OffButton from './OffButton';
 
 class Buttons extends Component {
   render() {
+    const { appendInput, handleEqual, clearInput, turnOff } = this.props;
     return (
       <div className="button-container">
         <div className="row-of-buttons">
-          <Button text="OFF" />
-          <Button text="AC" />
+          <OffButton text="OFF" handleClick={turnOff} />
+          <ClearButton text="AC" handleClick={clearInput} />
           <Button text="CE" />
-          <Button text="/" handleClick={this.props.appendInput} />
+          <Button text="/" handleClick={appendInput} />
         </div>
         <div className="row-of-buttons">
-          <Button text="7" handleClick={this.props.appendInput} />
-          <Button text="8" handleClick={this.props.appendInput} />
-          <Button text="9" handleClick={this.props.appendInput} />
-          <Button text="*" handleClick={this.props.appendInput} />
+          <Button text="7" handleClick={appendInput} />
+          <Button text="8" handleClick={appendInput} />
+          <Button text="9" handleClick={appendInput} />
+          <Button text="*" handleClick={appendInput} />
         </div>
         <div className="row-of-buttons">
-          <Button text="4" handleClick={this.props.appendInput} />
-          <Button text="5" handleClick={this.props.appendInput} />
-          <Button text="6" handleClick={this.props.appendInput} />
-          <Button text="-" handleClick={this.props.appendInput} />
+          <Button text="4" handleClick={appendInput} />
+          <Button text="5" handleClick={appendInput} />
+          <Button text="6" handleClick={appendInput} />
+          <Button text="-" handleClick={appendInput} />
         </div>
         <div className="row-of-buttons">
-          <Button text="1" handleClick={this.props.appendInput} />
-          <Button text="2" handleClick={this.props.appendInput} />
-          <Button text="3" handleClick={this.props.appendInput} />
-          <Button text="+" handleClick={this.props.appendInput} />
+          <Button text="1" handleClick={appendInput} />
+          <Button text="2" handleClick={appendInput} />
+          <Button text="3" handleClick={appendInput} />
+          <Button text="+" handleClick={appendInput} />
         </div>
         <div className="row-of-buttons">
-          <ZeroButton text="0" handleClick={this.props.appendInput} />
-          <Button text="." handleClick={this.props.appendInput} />
-          <EqualButton text="=" handleClick={this.props.handleEqual} />
+          <ZeroButton text="0" handleClick={appendInput} />
+          <Button text="." handleClick={appendInput} />
+          <EqualButton text="=" handleClick={handleEqual} />
         </div>
       </div>
     );
