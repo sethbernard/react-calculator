@@ -21,9 +21,18 @@ class App extends Component {
 
   handleEqual = () => {
     let { input } = this.state;
-    this.setState({
-      output: parseFloat(math.eval(input)).toFixed(4)
-    });
+    let calculatedInput = math.eval(input);
+
+    if (calculatedInput % 1 === 0) {
+      this.setState({
+        output: calculatedInput
+      });
+    } else {
+      this.setState({
+        output: calculatedInput.toFixed(4)
+      });
+    }
+
     setTimeout(this.newCalculation, 1);
   };
 

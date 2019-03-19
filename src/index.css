@@ -10,8 +10,10 @@ body {
 .App {
   height: 650px;
   width: 400px;
-  border: 1px solid black;
+  border: 2px solid grey;
   border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  background-color: grey;
 }
 
 .display-container {
@@ -20,6 +22,8 @@ body {
   border-radius: 6px;
   box-sizing: border-box;
   margin: 30px 20px;
+  color: #41ff00;
+  background-color: black;
 }
 
 .display-chain {
@@ -49,6 +53,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+  background-color: rgba(20, 20, 20, 0.883);
+  color: white;
 }
 .button-container {
   cursor: pointer;
@@ -74,4 +81,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: -3px 3px darkgrey, -2px 2px black, -1px 1px black;
+  background-color: black;
+  color: white;
+}
+
+.sensitiveButton {
+  background-color: orange;
+  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+}
+#equalButton {
+  background-color: green;
+  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+}
+
+.operationButton {
+  background-color: blue;
+  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
 }
