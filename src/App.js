@@ -32,7 +32,6 @@ class App extends Component {
         output: calculatedInput.toFixed(4)
       });
     }
-
     setTimeout(this.newCalculation, 1);
   };
 
