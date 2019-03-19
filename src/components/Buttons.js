@@ -18,9 +18,9 @@ class Buttons extends Component {
     return (
       <div className="button-container">
         <div className="row-of-buttons">
-          <OffButton text="OFF" handleClick={turnOff} />
-          <ClearButton text="AC" handleClick={clearInput} />
-          <DeleteButton text="CE" handleClick={handleDelete} />
+          <OffButton text="OFF" turnOff={turnOff} />
+          <ClearButton text="AC" clearInput={clearInput} />
+          <DeleteButton text="CE" handleDelete={handleDelete} />
           <Button text="/" handleClick={appendInput} />
         </div>
         <div className="row-of-buttons">
@@ -44,7 +44,7 @@ class Buttons extends Component {
         <div className="row-of-buttons">
           <ZeroButton text="0" handleClick={appendInput} />
           <Button text="." handleClick={appendInput} />
-          <EqualButton text="=" handleClick={handleEqual} />
+          <EqualButton text="=" handleEqual={handleEqual} />
         </div>
       </div>
     );

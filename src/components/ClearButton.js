@@ -2,7 +2,7 @@ import React from 'react';
 
 const ClearButton = props => {
   return (
-    <div className="Button" onClick={props.handleClick}>
+    <div className="Button" onClick={props.clearInput}>
       {props.text}
     </div>
   );
