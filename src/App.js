@@ -21,16 +21,23 @@ class App extends Component {
 
   handleEqual = () => {
     let { input } = this.state;
-    let calculatedInput = math.eval(input);
+    let calculatedInput;
+
+    if (!isNaN(input.slice(-1)) || input === '=') {
+      calculatedInput = math.eval(input);
+    }
 
     if (calculatedInput % 1 === 0) {
       this.setState({
         output: calculatedInput
       });
-    } else {
+    }
+    if (calculatedInput % 1 >= 1) {
       this.setState({
         output: calculatedInput.toFixed(4)
       });
+    } else {
+      this.setState({ input });
     }
     setTimeout(this.newCalculation, 1);
   };
