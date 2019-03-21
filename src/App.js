@@ -32,7 +32,7 @@ class App extends Component {
         output: calculatedInput
       });
     }
-    if (calculatedInput % 1 >= 1) {
+    if (calculatedInput % 1 !== 0 && !isNaN(calculatedInput)) {
       this.setState({
         output: calculatedInput.toFixed(4)
       });
