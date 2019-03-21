@@ -55,10 +55,17 @@ class App extends Component {
 
   handleDelete = () => {
     let { input } = this.state;
-    let fixedInput = input.substr(0, input.length - 1);
-    this.setState({
-      input: fixedInput
-    });
+    if (input.length > 1) {
+      let fixedInput = input.substr(0, input.length - 1);
+      this.setState({
+        input: fixedInput
+      });
+    } else {
+      this.setState({
+        input: '',
+        output: '0'
+      });
+    }
   };
 
   render() {
